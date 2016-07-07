@@ -15,6 +15,8 @@ class ganglia::gmetad(
   $gmetad_case_sensitive_hostnames =
     $::ganglia::params::gmetad_case_sensitive_hostnames,
   $gmetad_status_command           = $::ganglia::params::gmetad_status_command,
+  $carbon_server                   = undef,
+  $carbon_port                     = undef,
 ) inherits ganglia::params {
   validate_bool($all_trusted)
   ganglia_validate_clusters($clusters)
