@@ -178,10 +178,19 @@ case_sensitive_hostnames <%= @gmetad_case_sensitive_hostnames %>
 #
 # The hostname or IP address of the Graphite server
 # default: unspecified
+<% if @carbon_server -%>
+carbon_server "<%= @carbon_server %>"
+<% else -%>
 # carbon_server "my.graphite.box"
+<% end -%>
 #
 # The port and protocol on which Graphite is listening
 # default: 2003
+<% if @carbon_port -%>
+carbon_port "<%= @carbon_port %>"
+<% else -%>
+# carbon_port 2003
+<% end -%>
 # carbon_port 2003
 #
 # default: tcp
