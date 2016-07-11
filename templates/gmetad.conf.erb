@@ -191,7 +191,6 @@ carbon_port "<%= @carbon_port %>"
 <% else -%>
 # carbon_port 2003
 <% end -%>
-# carbon_port 2003
 #
 # default: tcp
 # carbon_protocol udp
@@ -200,7 +199,7 @@ carbon_port "<%= @carbon_port %>"
 # metric names exported by gmetad. Graphite uses dot-
 # separated paths to organize and refer to metrics.
 # default: unspecified
-# graphite_prefix "datacenter1.gmetad"
+ graphite_prefix "ganglia"
 #
 # A user-definable graphite path. Graphite uses dot-
 # separated paths to organize and refer to metrics.
